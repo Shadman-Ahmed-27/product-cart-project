@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfcf5;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Desserts Section */
+.desserts-section {
+    width: 65%;
+}
+
+.desserts-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.desserts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dessert-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.dessert-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: absolute;
+}
+
+.dessert-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.dessert-item p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.dessert-item button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dessert-item button:hover {
+    background-color: #e64a19;
+}
+
+/* Cart Section */
+.cart-section {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-total {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.order-total strong {
+    color: #333;
+}
+
+.carbon-neutral {
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #388e3c;
+}
+
+.confirm-order {
+    background-color: #d84315;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.confirm-order:hover {
+    background-color: #bf360c;
+}

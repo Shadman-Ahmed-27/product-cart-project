@@ -1,92 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
-    <title>Desserts</title>
-    <link rel="stylesheet" href="desserts.css">
-
-    <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
-    </style>
-
-  </head>
-  <body>
-    <div class="wrapper"> 
-        <div class="header">
-            Desserts
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Desserts Section -->
+        <div class="desserts-section">
+            <h1>Desserts</h1>
+            <div class="desserts-grid">
+                <!-- Dessert Item 1: Waffle with Berries -->
+                <div class="dessert-item" data-name="Waffle with Berries" data-price="6.50">
+                    <img src="../assets/images/image-waffle-desktop.jpg" alt="Waffle with Berries">
+                    <h3>Waffle with Berries</h3>
+                    <p>$6.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Dessert Item 2: Vanilla Bean Crème Brûlée -->
+                <div class="dessert-item" data-name="Vanilla Bean Crème Brûlée" data-price="7.00">
+                    <img src="../assets/images/image-creme-brulee-desktop.jpg" alt="Vanilla Bean Crème Brûlée">
+                    <h3>Vanilla Bean Crème Brûlée</h3>
+                    <p>$7.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Dessert Item 3: Macaron Mix of Five -->
+                <div class="dessert-item" data-name="Macaron Mix of Five" data-price="8.00">
+                    <img src="../assets/images/image-macaron-desktop.jpg" alt="Macaron Mix of Five">
+                    <h3>Macaron Mix of Five</h3>
+                    <p>$8.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                  <!-- Dessert Item 4: Classic Tiramisu -->
+                  <div class="dessert-item" data-name="Classic Tiramisu" data-price="5.50">
+                    <img src="../assets/images/image-tiramisu-desktop.jpg" alt="Classic Tiramisu">
+                    <h3>Classic Tiramisu</h3>
+                    <p>$5.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Dessert Item 5: Pistachio Baklava -->
+                <div class="dessert-item" data-name="Pistachio Baklava" data-price="4.00">
+                    <img src="../assets/images/image-baklava-desktop.jpg" alt="Pistachio Baklava">
+                    <h3>Pistachio Baklava</h3>
+                    <p>$4.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Dessert Item 6: Lemon Meringue Pie -->
+                <div class="dessert-item" data-name="Lemon Meringue Pie" data-price="5.00">
+                    <img src="../assets/images/image-meringue-desktop.jpg" alt="Lemon Meringue Pie">
+                    <h3>Lemon Meringue Pie</h3>
+                    <p>$5.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Dessert Item 7: Red Velvet Cake -->
+                <div class="dessert-item" data-name="Red Velvet Cake" data-price="4.50">
+                    <img src="../assets/images/image-cake-desktop.jpg" alt="Red Velvet Cake">
+                    <h3>Red Velvet Cake</h3>
+                    <p>$4.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Dessert Item 8: Salted Caramel Brownie -->
+                <div class="dessert-item" data-name="Salted Caramel Brownie" data-price="5.50">
+                    <img src="../assets/images/image-brownie-desktop.jpg" alt="Salted Caramel Brownie">
+                    <h3>Salted Caramel Brownie</h3>
+                    <p>$5.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Dessert Item 9: Vanilla Panna Cotta -->
+                <div class="dessert-item" data-name="Vanilla Panna Cotta" data-price="6.50">
+                    <img src="../assets/images/image-panna-cotta-desktop.jpg" alt="Vanilla Panna Cotta">
+                    <h3>Vanilla Panna Cotta</h3>
+                    <p>$6.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
         </div>
-        <div class="products">
-            <div class="product waffleBerries">
-                <h2>Waffle with Berries</h2>
-                <p>Price: $6.50</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
 
-            <div class="product vanillaBean">
-                <h2>Vanilla Bean Crème Brûlée</h2>
-                <p>Price: $7.00</p>
-                <button class="add-to-cart">Add to Cart</button>
+        <!-- Cart Section -->
+        <div class="cart-section">
+            <h2>Your Cart (<span id="cart-count">0</span>)</h2>
+            <ul class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <div class="order-total">
+                <p>Order Total: <strong id="order-total">$0.00</strong></p>
             </div>
-
-            <div class="product macaronMix">
-                <h2>Macaron Mix of Five</h2>
-                <p>Price: $8.00</p>
-                <button class="add-to-cart">Add to Cart</button>
+            <div class="carbon-neutral">
+                <p>This is a <strong>carbon-neutral</strong> delivery</p>
             </div>
-
-            <div class="product tiramisu">
-                <h2>Classic Tiramisu</h2>
-                <p>Price: $5.50</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <div class="product pistachioBaklava">
-                <h2>Pistachio Baklava</h2>
-                <p>Price: $4.00</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <div class="product lemonMeringue">
-                <h2>Lemon Meringue Pie</h2>
-                <p>Price: $5.00</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <div class="product redVelvet">
-                <h2>Red Velvet Cake</h2>
-                <p>Price: $4.50</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <div class="product saltedCaramel">
-                <h2>Salted Caramel Brownie</h2>
-                <p>Price: $4.50</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <div class="product vanillaPanna">
-                <h2>Vanilla Panna Cotta</h2>
-                <p>Price: $6.50</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="cart">
-            <h3>Your Cart (<span class="cart-quantity">0</span>)</h3>
-            <div class="cart-items">Your added items will appear here</div>
             <button class="confirm-order">Confirm Order</button>
-            <button class="start-new-order">Start New Order</button>
-        </div>
-
-        <div class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-            Coded by <a href="#">Shadman Ahmed</a>.
         </div>
     </div>
-  </body>
+    
+    <script src="desserts.js"></script>
+</body>
 </html>
